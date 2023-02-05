@@ -14,6 +14,8 @@
             <ComboBoxItem x:Name="cbiCompany" Content="Company"/>
             <ComboBoxItem x:Name="cbiBillGastes" Content="Bill Gates"/>
             <ComboBoxItem x:Name="cbiLarryPage" Content="Larry Page"/>
+            <ComboBoxItem x:Name="cbiTim" Content="Tim Cook"/>
+            <ComboBoxItem x:Name="cbiLee" Content="Lee Jae Young"/>
         </ComboBox>
         <Button x:Name="btnConclusion" Content="Withdraw" HorizontalAlignment="Left" Margin="255,11,0,0" VerticalAlignment="Top" Width="81" Height="21" Click="btnConclusion_Click"/>
 

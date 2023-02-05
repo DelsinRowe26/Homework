@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<users>
+	<user name="Bill Gates">
+		<company>Microsoft</company>
+		<age>67</age>
+		<dateofbirth>28.10.1955</dateofbirth>
+	</user>
+	<user name="Larry Page">
+		<company>Google</company>
+		<age>49</age>
+		<dateofbirth>26.03.1973</dateofbirth>
+	</user>
+	<user name="Tim Cook">
+		<company>Apple</company>
+		<age>62</age>
+		<dateofbirth>01.11.1960</dateofbirth>
+	</user>
+	<user name="Lee Jae Young">
+		<company>Samsung</company>
+		<age>64</age>
+		<dateofbirth>23.06.1968</dateofbirth>
+	</user>
+</users>

@@ -1,0 +1,119 @@
+\hypertarget{_main_window_8xaml_8cs_source}{}\doxysection{Main\+Window.\+xaml.\+cs}
+\label{_main_window_8xaml_8cs_source}\index{E:/programs/Homework/Homework/MainWindow.xaml.cs@{E:/programs/Homework/Homework/MainWindow.xaml.cs}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_main_window_8xaml_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }System.Windows;}
+\DoxyCodeLine{\Hypertarget{_main_window_8xaml_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }System.Xml;}
+\DoxyCodeLine{\Hypertarget{_main_window_8xaml_8cs_source_l00003}00003\ }
+\DoxyCodeLine{\Hypertarget{_main_window_8xaml_8cs_source_l00004}00004\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_homework}{Homework}}}
+\DoxyCodeLine{\Hypertarget{_main_window_8xaml_8cs_source_l00005}00005\ \{}
+\DoxyCodeLine{\Hypertarget{_main_window_8xaml_8cs_source_l00010}\mbox{\hyperlink{class_homework_1_1_main_window}{00010}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{partial\ class\ }\mbox{\hyperlink{class_homework_1_1_main_window}{MainWindow}}\ :\ Window}
+\DoxyCodeLine{\Hypertarget{_main_window_8xaml_8cs_source_l00011}00011\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_main_window_8xaml_8cs_source_l00015}00015\ \ \ \ \ \ \ \ \ XmlDocument\ xDoc\ =\ \textcolor{keyword}{new}\ XmlDocument();}
+\DoxyCodeLine{\Hypertarget{_main_window_8xaml_8cs_source_l00016}00016\ }
+\DoxyCodeLine{\Hypertarget{_main_window_8xaml_8cs_source_l00020}\mbox{\hyperlink{class_homework_1_1_main_window_ad5795aae9473f770e2391ae870ebde73}{00020}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_homework_1_1_main_window_ad5795aae9473f770e2391ae870ebde73}{MainWindow}}()}
+\DoxyCodeLine{\Hypertarget{_main_window_8xaml_8cs_source_l00021}00021\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_main_window_8xaml_8cs_source_l00022}00022\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_homework_1_1_main_window_a6507dce9889c59f0d53507755c4ffc7b}{InitializeComponent}}();}
+\DoxyCodeLine{\Hypertarget{_main_window_8xaml_8cs_source_l00023}00023\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_main_window_8xaml_8cs_source_l00024}00024\ }
+\DoxyCodeLine{\Hypertarget{_main_window_8xaml_8cs_source_l00040}00040\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ Window\_Loaded(\textcolor{keywordtype}{object}\ sender,\ RoutedEventArgs\ e)}
+\DoxyCodeLine{\Hypertarget{_main_window_8xaml_8cs_source_l00041}00041\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_main_window_8xaml_8cs_source_l00042}00042\ \ \ \ \ \ \ \ \ \ \ \ \ xDoc.Load(\textcolor{stringliteral}{"{}personal.xml"{}});}
+\DoxyCodeLine{\Hypertarget{_main_window_8xaml_8cs_source_l00043}00043\ \ \ \ \ \ \ \ \ \ \ \ \ XmlElement?\ xRoot\ =\ xDoc.DocumentElement;}
+\DoxyCodeLine{\Hypertarget{_main_window_8xaml_8cs_source_l00044}00044\ }
+\DoxyCodeLine{\Hypertarget{_main_window_8xaml_8cs_source_l00045}00045\ \ \ \ \ \ \ \ \ \ \ \ \ XmlNodeList?\ nodes\ =\ xRoot?.SelectNodes(\textcolor{stringliteral}{"{}*"{}});}
+\DoxyCodeLine{\Hypertarget{_main_window_8xaml_8cs_source_l00046}00046\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (nodes\ is\ not\ \textcolor{keyword}{null})}
+\DoxyCodeLine{\Hypertarget{_main_window_8xaml_8cs_source_l00047}00047\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_main_window_8xaml_8cs_source_l00048}00048\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{foreach}\ (XmlNode\ node\ \textcolor{keywordflow}{in}\ nodes)}
+\DoxyCodeLine{\Hypertarget{_main_window_8xaml_8cs_source_l00049}00049\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_main_window_8xaml_8cs_source_l00050}00050\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ tbXml.Text\ =\ tbXml.Text\ +\ node.OuterXml\ +\ \textcolor{charliteral}{'\(\backslash\)n'};}
+\DoxyCodeLine{\Hypertarget{_main_window_8xaml_8cs_source_l00051}00051\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_main_window_8xaml_8cs_source_l00052}00052\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_main_window_8xaml_8cs_source_l00053}00053\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_main_window_8xaml_8cs_source_l00054}00054\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_main_window_8xaml_8cs_source_l00055}00055\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_main_window_8xaml_8cs_source_l00060}\mbox{\hyperlink{class_homework_1_1_main_window_ad3a4b3f86446d577c0785676b9dec0d4}{00060}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_homework_1_1_main_window_ad3a4b3f86446d577c0785676b9dec0d4}{XmlFilter}}(\textcolor{keywordtype}{string}\ filter)}
+\DoxyCodeLine{\Hypertarget{_main_window_8xaml_8cs_source_l00061}00061\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_main_window_8xaml_8cs_source_l00062}00062\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (cmbFilter.SelectedIndex\ ==\ 0)}
+\DoxyCodeLine{\Hypertarget{_main_window_8xaml_8cs_source_l00063}00063\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_main_window_8xaml_8cs_source_l00064}00064\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ XmlElement?\ xRoot\ =\ xDoc.DocumentElement;}
+\DoxyCodeLine{\Hypertarget{_main_window_8xaml_8cs_source_l00065}00065\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ XmlNodeList?\ personNodes\ =\ xRoot?.SelectNodes(filter);}
+\DoxyCodeLine{\Hypertarget{_main_window_8xaml_8cs_source_l00066}00066\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (personNodes\ is\ not\ \textcolor{keyword}{null})}
+\DoxyCodeLine{\Hypertarget{_main_window_8xaml_8cs_source_l00067}00067\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_main_window_8xaml_8cs_source_l00068}00068\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{foreach}\ (XmlNode\ node\ \textcolor{keywordflow}{in}\ personNodes)}
+\DoxyCodeLine{\Hypertarget{_main_window_8xaml_8cs_source_l00069}00069\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_main_window_8xaml_8cs_source_l00070}00070\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ tbXml.Text\ =\ tbXml.Text\ +\ node.SelectSingleNode(\textcolor{stringliteral}{"{}@name"{}})?.Value\ +\ \textcolor{charliteral}{'\(\backslash\)n'};}
+\DoxyCodeLine{\Hypertarget{_main_window_8xaml_8cs_source_l00071}00071\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_main_window_8xaml_8cs_source_l00072}00072\ }
+\DoxyCodeLine{\Hypertarget{_main_window_8xaml_8cs_source_l00073}00073\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_main_window_8xaml_8cs_source_l00074}00074\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_main_window_8xaml_8cs_source_l00075}00075\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}(cmbFilter.SelectedIndex\ ==\ 3)}
+\DoxyCodeLine{\Hypertarget{_main_window_8xaml_8cs_source_l00076}00076\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_main_window_8xaml_8cs_source_l00077}00077\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ XmlElement?\ xRoot\ =\ xDoc.DocumentElement;}
+\DoxyCodeLine{\Hypertarget{_main_window_8xaml_8cs_source_l00078}00078\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ XmlNode?\ Nodes\ =\ xRoot?.SelectSingleNode(\textcolor{stringliteral}{"{}//user[@name='Bill\ Gates']/age"{}});}
+\DoxyCodeLine{\Hypertarget{_main_window_8xaml_8cs_source_l00079}00079\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (Nodes\ is\ not\ \textcolor{keyword}{null})}
+\DoxyCodeLine{\Hypertarget{_main_window_8xaml_8cs_source_l00080}00080\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_main_window_8xaml_8cs_source_l00081}00081\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ tbXml.Text\ =\ tbXml.Text\ +\ Nodes.InnerText\ +\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{_main_window_8xaml_8cs_source_l00082}00082\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_main_window_8xaml_8cs_source_l00083}00083\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ XmlNode?\ NodesComp\ =\ xRoot?.SelectSingleNode(\textcolor{stringliteral}{"{}//user[@name='Bill\ Gates']/company"{}});}
+\DoxyCodeLine{\Hypertarget{_main_window_8xaml_8cs_source_l00084}00084\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (NodesComp\ is\ not\ \textcolor{keyword}{null})}
+\DoxyCodeLine{\Hypertarget{_main_window_8xaml_8cs_source_l00085}00085\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_main_window_8xaml_8cs_source_l00086}00086\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ tbXml.Text\ =\ tbXml.Text\ +\ NodesComp.InnerText\ +\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{_main_window_8xaml_8cs_source_l00087}00087\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_main_window_8xaml_8cs_source_l00088}00088\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_main_window_8xaml_8cs_source_l00089}00089\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (cmbFilter.SelectedIndex\ ==\ 4)}
+\DoxyCodeLine{\Hypertarget{_main_window_8xaml_8cs_source_l00090}00090\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_main_window_8xaml_8cs_source_l00091}00091\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ XmlElement?\ xRoot\ =\ xDoc.DocumentElement;}
+\DoxyCodeLine{\Hypertarget{_main_window_8xaml_8cs_source_l00092}00092\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ XmlNode?\ Nodes\ =\ xRoot?.SelectSingleNode(\textcolor{stringliteral}{"{}//user[@name='Larry\ Page']/age"{}});}
+\DoxyCodeLine{\Hypertarget{_main_window_8xaml_8cs_source_l00093}00093\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (Nodes\ is\ not\ \textcolor{keyword}{null})}
+\DoxyCodeLine{\Hypertarget{_main_window_8xaml_8cs_source_l00094}00094\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_main_window_8xaml_8cs_source_l00095}00095\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ tbXml.Text\ =\ tbXml.Text\ +\ Nodes.InnerText\ +\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{_main_window_8xaml_8cs_source_l00096}00096\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_main_window_8xaml_8cs_source_l00097}00097\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ XmlNode?\ NodesComp\ =\ xRoot?.SelectSingleNode(\textcolor{stringliteral}{"{}//user[@name='Larry\ Page']/company"{}});}
+\DoxyCodeLine{\Hypertarget{_main_window_8xaml_8cs_source_l00098}00098\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (NodesComp\ is\ not\ \textcolor{keyword}{null})}
+\DoxyCodeLine{\Hypertarget{_main_window_8xaml_8cs_source_l00099}00099\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_main_window_8xaml_8cs_source_l00100}00100\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ tbXml.Text\ =\ tbXml.Text\ +\ NodesComp.InnerText\ +\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{_main_window_8xaml_8cs_source_l00101}00101\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_main_window_8xaml_8cs_source_l00102}00102\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_main_window_8xaml_8cs_source_l00103}00103\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{_main_window_8xaml_8cs_source_l00104}00104\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_main_window_8xaml_8cs_source_l00105}00105\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ XmlElement?\ xRoot\ =\ xDoc.DocumentElement;}
+\DoxyCodeLine{\Hypertarget{_main_window_8xaml_8cs_source_l00106}00106\ }
+\DoxyCodeLine{\Hypertarget{_main_window_8xaml_8cs_source_l00107}00107\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ XmlNodeList?\ companyNodes\ =\ xRoot?.SelectNodes(filter);}
+\DoxyCodeLine{\Hypertarget{_main_window_8xaml_8cs_source_l00108}00108\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (companyNodes\ is\ not\ \textcolor{keyword}{null})}
+\DoxyCodeLine{\Hypertarget{_main_window_8xaml_8cs_source_l00109}00109\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_main_window_8xaml_8cs_source_l00110}00110\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{foreach}\ (XmlNode\ node\ \textcolor{keywordflow}{in}\ companyNodes)}
+\DoxyCodeLine{\Hypertarget{_main_window_8xaml_8cs_source_l00111}00111\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_main_window_8xaml_8cs_source_l00112}00112\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ tbXml.Text\ =\ tbXml.Text\ +\ node.InnerText\ +\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{_main_window_8xaml_8cs_source_l00113}00113\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_main_window_8xaml_8cs_source_l00114}00114\ }
+\DoxyCodeLine{\Hypertarget{_main_window_8xaml_8cs_source_l00115}00115\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_main_window_8xaml_8cs_source_l00116}00116\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_main_window_8xaml_8cs_source_l00117}00117\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_main_window_8xaml_8cs_source_l00118}00118\ }
+\DoxyCodeLine{\Hypertarget{_main_window_8xaml_8cs_source_l00124}00124\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ btnConclusion\_Click(\textcolor{keywordtype}{object}\ sender,\ RoutedEventArgs\ e)}
+\DoxyCodeLine{\Hypertarget{_main_window_8xaml_8cs_source_l00125}00125\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_main_window_8xaml_8cs_source_l00126}00126\ \ \ \ \ \ \ \ \ \ \ \ \ tbXml.Text\ =\ \textcolor{stringliteral}{"{}"{}};}
+\DoxyCodeLine{\Hypertarget{_main_window_8xaml_8cs_source_l00127}00127\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{switch}\ (cmbFilter.SelectedIndex)}
+\DoxyCodeLine{\Hypertarget{_main_window_8xaml_8cs_source_l00128}00128\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_main_window_8xaml_8cs_source_l00129}00129\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 0:}
+\DoxyCodeLine{\Hypertarget{_main_window_8xaml_8cs_source_l00130}00130\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_homework_1_1_main_window_ad3a4b3f86446d577c0785676b9dec0d4}{XmlFilter}}(\textcolor{stringliteral}{"{}user"{}});}
+\DoxyCodeLine{\Hypertarget{_main_window_8xaml_8cs_source_l00131}00131\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{_main_window_8xaml_8cs_source_l00132}00132\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 1:}
+\DoxyCodeLine{\Hypertarget{_main_window_8xaml_8cs_source_l00133}00133\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_homework_1_1_main_window_ad3a4b3f86446d577c0785676b9dec0d4}{XmlFilter}}(\textcolor{stringliteral}{"{}//user/age"{}});}
+\DoxyCodeLine{\Hypertarget{_main_window_8xaml_8cs_source_l00134}00134\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{_main_window_8xaml_8cs_source_l00135}00135\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 2:}
+\DoxyCodeLine{\Hypertarget{_main_window_8xaml_8cs_source_l00136}00136\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_homework_1_1_main_window_ad3a4b3f86446d577c0785676b9dec0d4}{XmlFilter}}(\textcolor{stringliteral}{"{}//user/company"{}});}
+\DoxyCodeLine{\Hypertarget{_main_window_8xaml_8cs_source_l00137}00137\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{_main_window_8xaml_8cs_source_l00138}00138\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 3:}
+\DoxyCodeLine{\Hypertarget{_main_window_8xaml_8cs_source_l00139}00139\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_homework_1_1_main_window_ad3a4b3f86446d577c0785676b9dec0d4}{XmlFilter}}(\textcolor{stringliteral}{"{}//user/company"{}});}
+\DoxyCodeLine{\Hypertarget{_main_window_8xaml_8cs_source_l00140}00140\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{_main_window_8xaml_8cs_source_l00141}00141\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 4:}
+\DoxyCodeLine{\Hypertarget{_main_window_8xaml_8cs_source_l00142}00142\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_homework_1_1_main_window_ad3a4b3f86446d577c0785676b9dec0d4}{XmlFilter}}(\textcolor{stringliteral}{"{}//user/company"{}});}
+\DoxyCodeLine{\Hypertarget{_main_window_8xaml_8cs_source_l00143}00143\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{_main_window_8xaml_8cs_source_l00144}00144\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_main_window_8xaml_8cs_source_l00145}00145\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_main_window_8xaml_8cs_source_l00146}00146\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_main_window_8xaml_8cs_source_l00147}00147\ \}}
+
+\end{DoxyCode}
